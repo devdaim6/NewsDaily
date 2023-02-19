@@ -32,7 +32,7 @@ setQuery(text);
     </ul>
 
     <form role="search">
-    <input className="form-control" type="search"  id="search" autoFocus placeholder="Search" aria-label="Search" />
+    <input className="form-control" type="search"  id="search" placeholder="Search" aria-label="Search" />
     
   </form>
     <button onClick={search} className="btn btn-sm mx-1.2 btn-outline-secondary text-white">Search</button>
