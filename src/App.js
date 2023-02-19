@@ -35,7 +35,7 @@ setQuery(text);
     <input className="form-control" type="search"  id="search" autoFocus placeholder="Search" aria-label="Search" />
     
   </form>
-    <button onClick={search} className="btn btn-sm btn-primary">Search</button>
+    <button onClick={search} className="btn btn-sm btn-outline-white text-white">Search</button>
   </div>
 </div>
 </nav>
