@@ -21,20 +21,19 @@ setQuery(text);
     <span className="navbar-toggler-icon"></span>
   </button>
 
-  <div className="collapse navbar-collapse" id="navbarsExample02">
+  <div className=" collapse navbar-collapse mx-0" id="navbarsExample02">
     <ul className="navbar-nav me-auto">
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="/">Home</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="/news">News</a>
+       
       </li>
     </ul>
 
-    <form role="search">
-    <input className="form-control" type="search"  id="search" placeholder="Search" aria-label="Search" />
-    
-  </form>
+    <input className="form-control" type="search"  id="s" placeHolder="Search"  aria-label="Search" />
+  
+ 
+
     <button onClick={search} className="btn btn-sm mx-1 btn-outline-secondary text-white">Search</button>
   </div>
 </div>

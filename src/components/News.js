@@ -43,7 +43,9 @@ export default class News extends Component {
                     description={element.description.slice(0, 88)}
                     image={element.image}
                     url={element.url}
-                    published_at={element.publishedAt}
+                    publishedAt={element.publishedAt}
+                    sourceName={element.source.name}
+                    sourceUrl={element.source.url}
                   />
                   <br />
                   <br />
