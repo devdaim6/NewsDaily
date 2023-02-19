@@ -61,7 +61,7 @@ export default class News extends Component {
               <span style={align}>
                 {" "}
                 Copyright 2023 |
-                <a href="devdaim.me" style={align}>
+                <a href="https://devdaim.me" style={align}>
                   {" "}
                   DevDaim
                 </a>{" "}
