@@ -30,13 +30,13 @@ export default class News extends Component {
         <div className="container my-3">
           <h1 style={align}>Top Headlines</h1>
           
-          <hr className="border-1 border-white"/>
+          <hr className="border-1 my-1 border-white"/>
           
           {this.state.loader && <Spinner />}
           <div className="row">
             {this.state.articles.map((element) => {
               return (
-                <div className="col-md-4  lg-4" key={element.url}>
+                <div className="col-md-4 sm-12 lg-4 mx-2" key={element.url}>
                   <NewsItem
                     title={element.title.slice(0, 45)}
                     description={element.description.slice(0, 88)}
@@ -48,7 +48,7 @@ export default class News extends Component {
                   />
                   <br />
                   <br />
-                  <br />
+                 
                 </div>
               );
             })}
