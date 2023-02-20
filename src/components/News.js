@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
-
 export default class News extends Component {
   articles = [];
   constructor() {
@@ -11,9 +10,9 @@ export default class News extends Component {
       loader: false,
     };
   }
-  
   async componentDidMount() {
-    let url = `https://gnews.io/api/v4/search?apikey=04b1b2a9e1fe19a975c5a69afa6080e0&lang=en&sortBy=publishedAt&q=${this.props.search}`;
+    let url = `https://gnews.io/api/v4/top-headlines?apikey=04b1b2a9e1fe19a975c5a69afa6080e0&lang=en&sortBy=publishedAt&q=${this.props.search}`;
+   
     this.setState({ loader: true });
     let data = await fetch(url);
     let parsedData = await data.json();

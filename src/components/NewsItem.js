@@ -19,12 +19,12 @@ export default class NewsItem extends Component {
               className="card-img-top"
               alt="img"
             />
-            <div className="card-body">
+            <div className="card-body bg-black text-white">
               <h5 className="card-title bg-black text-white">{title}...</h5>
               <p className="card-text bg-black text-white">{description}...</p>
               <p className="card-text bg-black text-white">{publishedAt}a</p>
               <p className="card-text bg-black text-white">
-                <a href={sourceUrl}>{sourceName}</a>
+                <a href={sourceUrl}>Source</a> {sourceName}
               </p>
               <a
                 href={url}
