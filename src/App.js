@@ -1,13 +1,15 @@
 import News from "./components/News"
 import React from 'react'
-import { useState } from "react"
-let text;
+// import { useState } from "react"
 function App() {
-const [query,setQuery]=useState("kashmir");
-function handleOnChange(){
-text=document.getElementById("s").innerText;
+/*   const [Query,setQuery]=useState("football");
+  let text;
+  function handleOnChange(){
+text=document.getElementById("s").value;
 setQuery(text);
-}
+console.log(text)
+console.log(Query)
+} */
   return (
     <>
     <div>
@@ -30,16 +32,16 @@ setQuery(text);
       </li>
     </ul>
 
-    <input className="form-control"type="search" id="s" placeholder="Search"  value={text}  aria-label="Search" />
+    <input className="form-control"  id="s" placeholder="Search"   aria-label="Search" />
   
  
 
-    <button onClick={handleOnChange} className="btn btn-sm mx-1 btn-outline-secondary text-white">Search</button>
+    <button  className="btn btn-sm mx-1 btn-outline-secondary text-white" >Search</button>
   </div>
 </div>
 </nav>
       
-      <News search={query}/>
+      <News search={""}/>
    
     </div>
      
