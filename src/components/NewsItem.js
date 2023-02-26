@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, image, url, publishedAt, sourceUrl, sourceName } =
+    let { title, description, urlToImage, url, publishedAt,  sourceName } =
       this.props;
 
 let date=new Date(publishedAt);
@@ -16,17 +16,17 @@ let date=new Date(publishedAt);
         <div>
           <div className="card mx-auto" style={{ width: "18rem" }}>
             <img
-              src={image}
+              src={urlToImage}
               style={imgSize}
               className="card-img-top"
-              alt="img"
+              alt="loading ..."
             />
             <div className="card-body bg-black text-white">
               <h5 className="card-title bg-black text-white">{title}...</h5>
-              <p className="card-text bg-black text-white">{description}...</p>
-              <p className="card-text bg-black text-white">
-                <a href={sourceUrl}>Source</a> {sourceName}
-              </p>
+              <span className="card-text bg-black text-white">{description}...</span><br />
+              {/* <span className="card-text bg-black text-white">
+              Source : {sourceName}
+              </span> */}
               <p className="card-text bg-black text-white">{date.toLocaleString()}</p>
               <a
                 href={url}
