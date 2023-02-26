@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, urlToImage, url, publishedAt,  sourceName } =
+    let { title, description, urlToImage, url, publishedAt } =
       this.props;
 
 let date=new Date(publishedAt);
