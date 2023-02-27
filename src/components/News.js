@@ -99,7 +99,7 @@ setSubmit(query)
                 <NewsItem
                   title={element.title.slice(0, 40)}
                   description={element.description.slice(0, 40)}
-                  urlToImage={element.urlToImage}
+                  image={element.image}
                   url={element.url}
                   publishedAt={element.publishedAt}
                   sourceName={element.source.name}
