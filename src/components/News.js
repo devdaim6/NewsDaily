@@ -7,7 +7,7 @@ export default function News() {
   const [articles, setArticles] = useState([]);
   const [loader, setLoader] = useState(false);
   const [query, setQuery] = useState("");
-  const [submit,setSubmit]=useState("srinagar");
+  const [submit,setSubmit]=useState("kashmir");
   useEffect(() => {
    const url = `https://gnews.io/api/v4/top-headlines?apikey=04b1b2a9e1fe19a975c5a69afa6080e0&q=${submit}&lang=en&nullable=none&sortBy=publishedAt&page=3&lang=en&category=general`; 
    const fetchData = async () => {
