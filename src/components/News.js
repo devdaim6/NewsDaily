@@ -1,37 +1,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import "./news.css"
-import { React, useState ,useEffect} from "react";
+import "./news.css";
+import { React, useState, useEffect } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 export default function News() {
   const [articles, setArticles] = useState([]);
   const [loader, setLoader] = useState(false);
   const [query, setQuery] = useState("");
-  const [submit,setSubmit]=useState("kashmir");
+  const [submit, setSubmit] = useState("kashmir");
   useEffect(() => {
-   const url = `https://gnews.io/api/v4/top-headlines?apikey=04b1b2a9e1fe19a975c5a69afa6080e0&q=${submit}&lang=en&nullable=none&sortBy=publishedAt&page=3&lang=en&category=general`; 
-   const fetchData = async () => {
-    try {
-      setLoader(true);
-      let data = await fetch(url);
-      let parsedData = await data.json();
-      setArticles(parsedData.articles);
-      setLoader(false);
-    } catch (error) {
-      console.log("error", error);
-    }
-  };
-  fetchData();
-  }, [submit])
+    const url = `https://gnews.io/api/v4/top-headlines?apikey=${process.env.REACT_APP_API_KEY}&q=${submit}&lang=en&nullable=none&sortBy=publishedAt&page=3&lang=en&category=general`;
+    const fetchData = async () => {
+      try {
+        setLoader(true);
+        let data = await fetch(url);
+        let parsedData = await data.json();
+        setArticles(parsedData.articles);
+        setLoader(false);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    fetchData();
+  }, [submit]);
 
-  function handleSubmit(){
-setSubmit(query)
-  } 
+  function handleSubmit() {
+    setSubmit(query);
+  }
 
   const align = {
     textAlign: "center",
     textDecoration: "none",
-    color: "white"
+    color: "white",
   };
   return (
     <>
@@ -75,13 +75,17 @@ setSubmit(query)
                 placeholder="Search"
                 value={query}
                 autoComplete="off"
-                onChange={e=>{setQuery(e.target.value)}}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                }}
                 aria-label="Search"
               />
-<span className="search border border-1 border-white rounded ms-2 me-0"  onClick={handleSubmit} >Search</span>
-
-
-
+              <span
+                className="search border border-1 border-white rounded ms-2 me-0"
+                onClick={handleSubmit}
+              >
+                Search
+              </span>
             </div>
           </div>
         </nav>
@@ -106,7 +110,6 @@ setSubmit(query)
                 />
                 <br />
                 <br />
-
               </div>
             );
           })}
@@ -129,4 +132,3 @@ setSubmit(query)
     </>
   );
 }
-
